@@ -1,4 +1,5 @@
 const DocsSubPage = ({ params }) => {
-  return <div>Docs Page {params.id}</div>;
+  console.log(params);
+  return <div>Docs Page</div>;
 };
 export default DocsSubPage;

@@ -29,8 +29,11 @@ Next steps:
 2. Run prisma db pull to turn your database schema into a Prisma schema.
 3. Run prisma generate to generate the Prisma Client. You can then start querying your database.
 
-More information in our documentation:
-https://pris.ly/d/getting-started
+More information in [prisma](https://pris.ly/d/getting-started):
+
+```sh
+pnpm prisma migrate dev --name project_and_tasks
+```
 
 ## Learn More
 

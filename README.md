@@ -33,6 +33,7 @@ More information in [prisma](https://pris.ly/d/getting-started):
 
 ```sh
 pnpm prisma migrate dev --name project_and_tasks
+pnpm prisma studio
 ```
 
 ## Learn More

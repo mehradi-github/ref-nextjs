@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header>
+        {/* <header>
           <nav className="felx items-center">
             {links.map((link) => (
               <ul>
@@ -33,7 +33,7 @@ export default function RootLayout({
               </ul>
             ))}
           </nav>
-        </header>
+        </header> */}
 
         <div>{children}</div>
       </body>

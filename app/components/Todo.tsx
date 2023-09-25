@@ -1,13 +1,24 @@
+'use client';
+import { completeTodo } from '@/utils/actions';
 import { Todo as TodoModel } from '@prisma/client';
-import React, { FC } from 'react';
+import React, { FC, useTransition } from 'react';
 interface props {
   todo: TodoModel;
 }
 const Todo: FC<props> = ({ todo }) => {
-  console.log('tessssst:', todo);
+  const [isPending, statrtTransition] = useTransition();
   return (
-    <div>
-      <div>{todo.content}</div>
+    <div
+      className={`border border-black/20 cursor-pointer ${
+        todo.completed ? 'line-through text-gray-900' : ''
+      }`}
+      onClick={() => {
+        statrtTransition(() => {
+          completeTodo(todo.id);
+        });
+      }}
+    >
+      {todo.content}
     </div>
   );
 };

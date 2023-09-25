@@ -8,16 +8,17 @@ interface props {
 const Todo: FC<props> = ({ todo }) => {
   const [isPending, statrtTransition] = useTransition();
   return (
-    <div>
-      <div
-        onClick={() => {
-          statrtTransition(() => {
-            completeTodo(todo.id);
-          });
-        }}
-      >
-        {todo.content}
-      </div>
+    <div
+      className={`border border-black/20 cursor-pointer ${
+        todo.completed ? 'line-through text-gray-900' : ''
+      }`}
+      onClick={() => {
+        statrtTransition(() => {
+          completeTodo(todo.id);
+        });
+      }}
+    >
+      {todo.content}
     </div>
   );
 };

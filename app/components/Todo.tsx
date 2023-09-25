@@ -1,3 +1,4 @@
+'use client';
 import { Todo as TodoModel } from '@prisma/client';
 import React, { FC } from 'react';
 interface props {
